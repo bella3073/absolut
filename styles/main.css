@@ -72,19 +72,10 @@ header .nav_right .search input {
 header .nav_right .search input::-moz-placeholder {
   color: #fff;
 }
-header .nav_right .search input:-ms-input-placeholder {
-  color: #fff;
-}
 header .nav_right .search input::placeholder {
   color: #fff;
 }
-header .nav_right .search input:-ms-input-placeholder {
-  color: #fff;
-}
 header .nav_right .search textarea::-moz-placeholder {
-  color: #fff;
-}
-header .nav_right .search textarea:-ms-input-placeholder {
   color: #fff;
 }
 header .nav_right .search textarea::placeholder {
@@ -166,7 +157,6 @@ main {
   overflow-x: hidden;
   /* best 상품 */
   /* text img 지나가는 animation */
-  /* 칵테일 레시피 */
 }
 main .bg {
   position: relative;
@@ -188,8 +178,7 @@ main .bg h1 { /* .bg 중앙 텍스트 부분 */
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  -webkit-animation: main_bg_text 2s ease alternate both;
-          animation: main_bg_text 2s ease alternate both;
+  animation: main_bg_text 2s ease alternate both;
 }
 main .bg > p {
   width: 50px;
@@ -308,58 +297,7 @@ main .text {
   height: 150px;
   animation: line_move 100s linear alternate-reverse infinite;
 }
-main .cocktail_g {
-  text-align: center;
-  margin: 150px 0;
-}
-main .cocktail_g > p {
-  width: 50%;
-  margin: 0 auto;
-}
-main .cocktail_g > p img {
-  width: 100%;
-}
-main .cocktail_g h1 {
-  margin-top: 70px;
-  font-size: 2.5rem;
-  color: #0c008d;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-main .cocktail_g .cocktail {
-  display: flex;
-  flex-flow: row wrap;
-  width: 95%;
-  margin: 0 auto;
-}
-main .cocktail_g .cocktail .coc {
-  width: 30%;
-  margin: 0 auto;
-  /* 텍스트 부분 */
-  /* 이미지 부분 */
-}
-main .cocktail_g .cocktail .coc h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  margin: 120px 0 20px;
-}
-main .cocktail_g .cocktail .coc p {
-  color: #888;
-  font-weight: 500;
-}
-main .cocktail_g .cocktail .coc a {
-  display: inline-block;
-  width: 500px;
-  margin: 30px 0;
-}
-main .cocktail_g .cocktail .coc a img {
-  width: 100%;
-}
-main .cocktail_g .cocktail .coc a:hover {
-  filter: grayscale(1);
-  animation: rotate 0.8s linear alternate-reverse infinite;
-}
+
 footer {
   text-align: center;
   background-color: #0c008d;
@@ -407,27 +345,11 @@ footer p span {
 }
 
 .after_e {
-  -webkit-animation: best 1.5s ease alternate both;
-          animation: best 1.5s ease alternate both;
-}
-
-.h2_color {
-  color: #d91c1c;
+  animation: best 1.5s ease alternate both;
 }
 
 .nav_color {
   opacity: 0;
-}
-
-@-webkit-keyframes main_bg_text {
-  0% {
-    opacity: 0;
-    letter-spacing: 0.1em;
-  }
-  100% {
-    opacity: 1;
-    letter-spacing: 0.05em;
-  }
 }
 
 @keyframes main_bg_text {
@@ -440,28 +362,12 @@ footer p span {
     letter-spacing: 0.05em;
   }
 }
-@-webkit-keyframes move {
-  0% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(5px);
-  }
-}
 @keyframes move {
   0% {
     transform: translateY(-5px);
   }
   100% {
     transform: translateY(5px);
-  }
-}
-@-webkit-keyframes move2 {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
   }
 }
 @keyframes move2 {
@@ -472,28 +378,12 @@ footer p span {
     transform: translateY(-10px);
   }
 }
-@-webkit-keyframes line_move {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 5000px;
-  }
-}
 @keyframes line_move {
   0% {
     background-position-x: 0;
   }
   100% {
     background-position-x: 5000px;
-  }
-}
-@-webkit-keyframes best {
-  0% {
-    width: 200px;
-  }
-  100% {
-    width: 0;
   }
 }
 @keyframes best {
@@ -504,25 +394,12 @@ footer p span {
     width: 0;
   }
 }
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(-5deg);
-  }
-}
 @keyframes rotate {
   0% {
     transform: rotate(5deg);
   }
   100% {
     transform: rotate(-5deg);
-  }
-}
-@media screen and (max-width: 1400px) {
-  main .best .swiper .best_pro .pro {
-    width: 33.3%;
   }
 }
 @media screen and (max-width: 1140px) {
