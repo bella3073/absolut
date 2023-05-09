@@ -11,22 +11,22 @@ const swiper1 = new Swiper('.swiper',{
     autoplay:{delay:2000},
     loop:false, /* 태그 사용시 맨 마지막 -> 첫번째로 돌아가는 모습이 더 자연스러워짐 */
     loopAdditionalSlides : 1,
-    /* breakpoints: {
+    breakpoints: {
         // 화면의 넓이가 400px 이상일 때
+        // 0: {
+        //     slidesPerView: 1
+        // },
+        // // 화면의 넓이가 550px 이상일 때
         0: {
             slidesPerView: 1
         },
-        // 화면의 넓이가 550px 이상일 때
-        550: {
+        600 : {
             slidesPerView: 2
         },
-        950 : {
+        900: {
             slidesPerView: 3
-        },
-        1200: {
-            slidesPerView: 4
         }
-    } */
+    }
 })
 
 //칵테일 부분

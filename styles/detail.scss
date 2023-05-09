@@ -2,6 +2,7 @@ $color1:#fff;
 $color2:#0c008d;
 $color3:#888;
 $color4:#000;
+$color5:#3f6fc5;
 @mixin bk {background-size:cover; background-position:center;}
 @mixin transform {transform:translate(-50%,-50%);}
 
@@ -12,8 +13,8 @@ main {
     .pro {
         display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
         p {width:500px; img {width:100%;}}
-        .text {background:#3f6fc5; border-radius:20px; margin-left:100px;
-            text-align:left; padding:30px 0 30px 40px;
+        .text {background:$color5; border-radius:20px; margin-left:100px;
+            text-align:left; padding:30px 40px;
             .txt {margin-bottom:40px;}
             .txt:nth-child(4) {margin-bottom:20px;}
             .txt:last-child {margin:0;}
@@ -49,11 +50,23 @@ main {
             }
         }
         > p {width:35%; margin:200px auto 0; img {width:100%;}}
+        > a {
+            display:none; background:$color5; color:$color1;
+            padding:8px 10px; border-radius:5px; margin-top:50px;
+            border:1px solid $color5;
+            animation:move 1s linear alternate-reverse infinite;
+        }
+        > a:hover {background:none; border:1px solid $color5; color:$color5}
         .inform {
             width:800px; margin:50px auto;
             img {width:100%;}
         }
     }//e:cock
+    .review {
+        h2 {font-size:2rem; color:$color2; font-weight:700; text-transform:uppercase; margin:200px 0 100px;}
+        iframe {
+        }
+    }
 }
 
 
@@ -61,8 +74,59 @@ main {
 .after_e {animation:coc 1.5s ease alternate both;}
 
 // animation
-
 @keyframes coc {
     0% {width:400px;}
     100% {width:0;}
+}
+@keyframes move {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-10px);}
+}
+
+//반응형
+@media screen and (max-width:1100px) {
+    main {
+        .pro {
+            flex-flow:column nowrap;
+            .text {margin:0;}
+        }
+        .cock {
+            .text_img {width:60%;}
+        }
+        .review {
+            iframe {width:80%;}
+        }
+    }
+}
+@media screen and (max-width:785px) {
+    main {
+        .cock {
+            > a {display:inline-block;}
+            .inform {display:none;}
+        }
+    }
+}
+@media screen and (max-width:650px) {
+    main {
+        .pro {
+            flex-flow:column nowrap; 
+            p {width:400px; margin:0 auto;}
+            .text {}
+        }
+        .cock {
+            .text_img {width:80%;}
+        }
+    }
+}
+@media screen and (max-width:530px) {
+    main {
+        .pro {
+            flex-flow:column nowrap; 
+            p {width:300px; margin:0 auto;}
+            .text {padding:20px 30px;}
+        }
+        .cock {
+            .text_img {width:95%;}
+        }
+    }
 }
