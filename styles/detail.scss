@@ -1,0 +1,68 @@
+$color1:#fff;
+$color2:#0c008d;
+$color3:#888;
+$color4:#000;
+@mixin bk {background-size:cover; background-position:center;}
+@mixin transform {transform:translate(-50%,-50%);}
+
+main {
+    text-align:center;
+    > h1 {font-size:2.5rem; color:$color2; font-weight:700; text-transform:uppercase; margin:180px 0 70px;}
+    /* 상품 정보 부분 */
+    .pro {
+        display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
+        p {width:500px; img {width:100%;}}
+        .text {background:#3f6fc5; border-radius:20px; margin-left:100px;
+            text-align:left; padding:30px 0 30px 40px;
+            .txt {margin-bottom:40px;}
+            .txt:nth-child(4) {margin-bottom:20px;}
+            .txt:last-child {margin:0;}
+            > p {line-height:1.5;  color:$color1;
+                span {font-weight:500;}
+            }
+        }
+    }
+    /* 칵테일 부분 */
+    .cock {
+        h1 {font-size:2rem; color:$color2; font-weight:700; text-transform:uppercase; margin:200px 0 100px;}
+        /* 스와이퍼 */
+        .swiper {width:80%;
+            .swiper-wrapper {
+                .swiper-slide {
+                    border:1px solid $color2; position:relative;
+                    padding:100px 0; transition:all 0.5s;
+                    .img {
+                        a {display:inline-block; width:33%;
+                        img {width:100%;}
+                        }
+                        span {
+                            display:inline-block; content:''; background:$color1;
+                            width:400px; height:500px; position:absolute; top:0; left:0;
+                        }
+                    }
+                    p {margin-top:10px; text-transform:capitalize;}
+                }
+                .swiper-slide:hover {filter:grayscale(1);}
+                .coc01 {top:0; left:1px;}
+                .coc03 {top:0; right:1px;}
+                .coc04 {top:0; right:2px;}
+            }
+        }
+        > p {width:35%; margin:200px auto 0; img {width:100%;}}
+        .inform {
+            width:800px; margin:50px auto;
+            img {width:100%;}
+        }
+    }//e:cock
+}
+
+
+
+.after_e {animation:coc 1.5s ease alternate both;}
+
+// animation
+
+@keyframes coc {
+    0% {width:400px;}
+    100% {width:0;}
+}

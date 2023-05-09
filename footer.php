@@ -1,24 +1,49 @@
 <style>
     footer {
-        text-align:center; background-color:$color2; margin-top:200px; color:#fff;
-        padding:50px 0 30px;
-        .sns {
-            margin-bottom:10px;
-            a {display:inline-block; width:30px; margin-right:10px; transition:all 0.5s;
-            img {width:100%;}
-            }
-            a:last-child {margin-right:0;}
-            a:hover {transform:translateY(-15px);}
-        }
-        p {line-height:1.3; font-size:0.85rem;
-            a {display:inline-block; color:#fff; font-size:0.85rem;}
-            a:hover {background:rgba(225,225,225,0.3);}
-            span {
-                content:''; display:inline-block; height:12px; width:1px; background-color:#fff;
-                margin:0 7px;
-            }
-        }
-    }
+  text-align: center;
+  background-color: #0c008d;
+  margin-top: 200px;
+  color: #fff;
+  padding: 50px 0 30px;
+}
+footer .sns {
+  margin-bottom: 10px;
+}
+footer .sns a {
+  display: inline-block;
+  width: 30px;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+footer .sns a img {
+  width: 100%;
+}
+footer .sns a:last-child {
+  margin-right: 0;
+}
+footer .sns a:hover {
+  transform: translateY(-15px);
+}
+footer p {
+  line-height: 1.3;
+  font-size: 0.85rem;
+}
+footer p a {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.85rem;
+}
+footer p a:hover {
+  background: rgba(225, 225, 225, 0.3);
+}
+footer p span {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 1px;
+  background-color: #fff;
+  margin: 0 7px;
+}
 </style>
 <footer>
         <div class="sns">
